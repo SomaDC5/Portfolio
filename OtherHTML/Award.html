@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>審査員特別賞受賞</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="ja">審査員特別賞受賞</h1>
+    <h1 class="en">Special Jury Award</h1>
+<div class="lang-btn">
+  <button onclick="switchLang('jp')">日本語</button>
+  <button onclick="switchLang('en')">EN</button>
+</div>
+
+  </header>
+
+  <section class="ja">
+    
+    
+    <h2>概要</h2>
+    <p>
+      学部研究で取り組んだ歩行バランス識別を建設現場の安全管理に応用し、
+      土木学会の安全問題討論会にて口頭発表を行った。
+      本研究は、現場作業員の安全性向上に寄与する提案として評価され、
+      審査員特別賞を受賞した。
+    </p>
+
+
+
+   
+    
+    <h2>背景・課題</h2>
+    <p>
+      建設現場では転倒や事故のリスクが高く、
+      安全管理の高度化が求められている。
+      従来の管理手法では個人の状態をリアルタイムで把握することが難しく、
+      事故予防の観点で課題があった。
+    </p>
+
+
+    
+        
+    <h2>取り組み</h2>
+    <p>
+      加速度センサを用いた歩行バランス識別技術を応用し、
+      作業員の危険状態を検知する手法を提案した。
+      また、実験結果をもとに安全管理への応用可能性を整理し、
+      分かりやすく<a href="https://committees.jsce.or.jp/csp02/system/files/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E9%83%A8%E9%96%80%E8%B3%87%E6%96%99%E9%9B%86_%E7%AC%AC1%E7%89%88.pdf">発表資料</a>
+      としてまとめた。
+    </p>
+
+
+    
+
+
+
+    
+    
+    <h2>成果</h2>
+    <p>
+      提案した手法は現場の安全性向上に寄与する点が評価され、
+      審査員特別賞を受賞した。
+      研究成果を社会課題に応用する価値を示すことができた。
+    </p>
+
+
+
+    
+   
+    <h2>得られた学び</h2>
+    <p>
+      本経験を通じて、研究成果を実社会に適用するためには、
+      技術的な精度だけでなく、応用方法や価値の伝え方が重要であることを学んだ。
+      また、プレゼンテーションを通じて研究の意義を伝える力を身につけた。
+    </p>
+
+
+
+    <a href="../index.html">← 戻る</a>
+  </section>
+
+
+<section class="en">
+
+
+  <h2>Overview</h2>
+  <p>
+    I applied my undergraduate research on walking balance classification
+    to safety management in construction sites
+    and gave an oral presentation at the JSCE Discussion Meeting on Construction Safety.
+    This research was recognized as a proposal contributing to the improvement of worker safety,
+    and received the Special Jury Award.
+  </p>
+
+
+
+
+
+
+  <h2>Background & Challenges</h2>
+  <p>
+    Construction sites involve high risks of falls and accidents,
+    creating a strong demand for more advanced safety management systems.
+    However, conventional management methods made it difficult
+    to monitor workers’ physical conditions in real time,
+    resulting in challenges in accident prevention.
+  </p>
+
+
+
+
+
+
+  <h2>Approach</h2>
+  <p>
+    By applying walking balance classification technology using acceleration sensors,
+    I proposed a method for detecting dangerous conditions among workers.
+    In addition, based on experimental results,
+    I organized the potential applications for safety management
+    and summarized them in an easy-to-understand
+    <a href="https://committees.jsce.or.jp/csp02/system/files/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E9%83%A8%E9%96%80%E8%B3%87%E6%96%99%E9%9B%86_%E7%AC%AC1%E7%89%88.pdf">
+      presentation material
+    </a>.
+  </p>
+
+
+
+
+
+
+  <h2>Results</h2>
+  <p>
+    The proposed method was recognized for its potential contribution
+    to improving safety at construction sites,
+    and received the Special Jury Award.
+    This achievement demonstrated the value of applying research outcomes
+    to real-world social issues.
+  </p>
+
+
+
+
+
+
+  <h2>What I Learned</h2>
+  <p>
+    Through this experience,
+    I learned that applying research outcomes to society
+    requires not only technical accuracy,
+    but also effective methods of application and communication of value.
+    In addition, through presentations,
+    I developed the ability to clearly convey the significance of research.
+  </p>
+
+
+
+  <a href="../index.html">← Back</a>
+</section>
+
+
+
+
+<script>
+function switchLang(lang) {
+  localStorage.setItem('lang', lang);
+
+  document.querySelectorAll('.ja').forEach(el => {
+    el.style.display = (lang === 'jp') ? 'block' : 'none';
+  });
+
+  document.querySelectorAll('.en').forEach(el => {
+    el.style.display = (lang === 'en') ? 'block' : 'none';
+  });
+}
+
+window.onload = () => {
+  const lang = localStorage.getItem('lang') || 'jp';
+  switchLang(lang);
+};
+</script>
+</body>
+</html>

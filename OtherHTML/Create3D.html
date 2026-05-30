@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>3Dゲーム開発（Unity）</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <div class="lang-btn">
+  <button onclick="switchLang('jp')">日本語</button>
+  <button onclick="switchLang('en')">EN</button>
+</div>
+    <h1 class="ja">3Dゲーム開発（Unity）</h1>
+    <h1 class="en">3D Game Development</h1>
+    
+  </header>
+
+  <section class="ja">
+    
+    <h2>概要</h2>
+    <p>
+      高校時代に文化祭展示を目的として、
+      友人と共同で3Dアクションゲームの開発を行った。
+      企画・設計・実装まで全てを担当し、
+      UnityおよびBlenderを用いて一からゲームを制作した。
+    </p>
+
+
+    
+    <h2>背景・課題</h2>
+    <p>
+      高校時代に独学で始めたプログラミング学習とBlenderでのCGの集大成として、
+      自分たちのアイデアを形にするプロジェクトに挑戦したいと考えた。
+      しかし、ゲーム開発の経験は限られており、ゲームエンジンの扱いなど未知の技術が多い状態でのスタートだった。
+    </p>
+    <div class="figure">
+              <img src="../images/3D_chara.PNG" alt="急傾斜地崩壊危険区域">
+              <p>図1：高校時代に作成した3DキャラCG
+              </p>
+        </div>
+
+   
+    <h2>取り組み</h2>
+    <p>
+      Unityを用いたゲーム開発と並行して、
+      Blenderでの3Dモデル作成を独学で習得した。
+      プレイヤー操作や敵キャラクターの挙動、ゲーム全体のシステム設計を担当し、
+      C#を用いてゲームロジックの実装を行った。
+    </p>
+
+    <p>
+      また、友人と役割分担を行いながら、
+      定期的に進捗を共有し、改善案を出し合いながら開発を進めた。
+    </p>
+    <div class="figure">
+      <video controls width="640">
+        <source src="../images/OrijChara.mov" type="video/mp4">
+        
+      </video>
+      <p>動画：ゲームに使用したキャラクターのモデルとモーション例</p>
+    </div>
+    
+
+    
+    <h2>成果</h2>
+    <p>
+      文化祭において実際に遊べる3Dアクションゲームとして展示を行い、
+      来場者から好評を得ることができた。
+      自ら学んだ技術を活用し、アイデアを具体的な形にできたことは大きな成果である。
+    </p>
+
+    <h2>得られた学び</h2>
+    <p>
+      本経験を通じて、新しい技術を主体的に学びながら実装する力を身につけた。
+      また、チーム開発におけるコミュニケーションや役割分担の重要性を学び、
+      協力して一つの成果物を作り上げる経験を得た。
+    </p>
+
+
+
+    <a href="../index.html">← 戻る</a>
+  </section>
+
+    <section class="en">
+    
+    <h2>Overview</h2>
+    <p>
+      During high school, I collaborated with a friend to develop a 3D action game for our school festival exhibition. I was responsible for the entire process, including planning, design, and implementation, and created the game from scratch using Unity and Blender.
+    </p>
+
+
+    
+    <h2>Background & Challenges</h2>
+    <p>
+      As the culmination of my self-taught programming studies and CG creation with Blender during high school, I wanted to take on a project that could turn our ideas into reality. However, we had limited experience in game development, and many technologies, including game engines, were completely new to us.
+    </p>
+    <div class="figure">
+              <img src="../images/3D_chara.PNG" alt="急傾斜地崩壊危険区域">
+              <p>Figure 1: 3D character CG created during high school
+              </p>
+        </div>
+
+   
+    <h2>Approach</h2>
+    <p>
+      Alongside game development in Unity,
+       I independently learned 3D modeling with Blender.
+        I was responsible for player controls,
+         enemy character behavior, and the overall game system design,
+          implementing the game logic using C#.
+    </p>
+
+    <p>
+      
+      In addition, while dividing roles with my friend,
+       we regularly shared progress and discussed improvements throughout development.
+    </p>
+    <div class="figure">
+      <video controls width="640">
+        <source src="../images/OrijChara.mov" type="video/mp4">
+        
+      </video>
+      <p>Video : Example of the character model and motion used in the game</p>
+    </div>
+    
+
+    
+    <h2>Results</h2>
+    <p>
+      We successfully exhibited the 3D action game at the school festival,
+       where visitors were able to play it and gave us positive feedback.
+       One of the greatest achievements was being able to transform self-learned skills and ideas into a tangible product.
+    </p>
+
+    <h2>What I Learned</h2>
+    <p>
+      Through this experience, I developed the ability to proactively learn and implement new technologies. 
+      I also learned the importance of communication and role sharing in team development, 
+      gaining valuable experience in collaboratively creating a complete product.
+    </p>
+
+
+
+    <a href="../index.html">← Back</a>
+  </section>
+
+<script>
+function switchLang(lang) {
+  localStorage.setItem('lang', lang);
+
+  document.querySelectorAll('.ja').forEach(el => {
+    el.style.display = (lang === 'jp') ? 'block' : 'none';
+  });
+
+  document.querySelectorAll('.en').forEach(el => {
+    el.style.display = (lang === 'en') ? 'block' : 'none';
+  });
+}
+
+window.onload = () => {
+  const lang = localStorage.getItem('lang') || 'jp';
+  switchLang(lang);
+};
+</script>
+</body>
+</html>

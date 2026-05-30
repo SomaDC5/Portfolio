@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>データサイエンスラボ</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+  <div class="lang-btn">
+  <button onclick="switchLang('jp')">日本語</button>
+  <button onclick="switchLang('en')">EN</button>
+</div>
+    <h1 class="ja">自己研究発表（幸福度xドル円）</h1>
+    <h1 class="en">Personal Research Presentation</h1>
+  </header>
+
+  <section class="ja">
+    
+    <h2>概要</h2>
+    <p>
+      所属していた研究団体である関西大学データサイエンスラボ＆コミュニティでの活動として、B1の際に「日々の幸福度とドル円為替レートの関係」をテーマに
+      自主研究を行い、分析結果を発表した。具体的には新聞記事データを用いて社会の幸福度を定量化し、
+      金融市場との関係性を分析することで、データから新たな視点を得ることを目的とした。
+    </p>
+
+
+    
+    <h2>背景・課題</h2>
+    <p>
+      為替市場は経済状況や社会情勢の影響を受けて変動するが、
+      「人々の心理状態」との関係は定量的に分析されることが少ない。
+      そこで、ニュース記事から社会全体の感情を抽出することで、
+      為替との関連性を分析できるのではないかと考えた。
+    </p>
+
+
+   
+    <h2>取り組み</h2>
+    <p>
+      新聞記事データに対して形態素解析を行い、
+      ポジティブ・ネガティブな単語の出現傾向から幸福度を数値化した。
+      さらに、日々のドル円為替レートと統合し、
+      相関分析や統計的手法を用いて両者の関係性を検証した。
+    </p>
+   <div class="figure">
+      <video controls width="640">
+        <source src="../images/DataScienceLab.MP4" type="video/mp4">
+        
+      </video>
+      <p>動画：データサイエンスラボでの実際の発表動画</p>
+    </div>
+
+    
+    <h2>得られた学び</h2>
+    <p>
+      本研究を通じて、テキストデータから特徴量を抽出し、
+      定量的な分析に落とし込むプロセスを学んだ。
+      また、仮説を立ててデータで検証する重要性と、
+      分析結果を論理的に公の場で説明する力をB1という早い段階で身につけることができた。
+    </p>
+
+
+    <a href="../index.html">← 戻る</a>
+  </section>
+
+
+<section class="en">
+
+  <h2>Overview</h2>
+  <p>
+    As part of my activities in the Kansai University Data Science Lab & Community,
+    I conducted an independent research project during my first undergraduate year
+    on the theme of “The Relationship Between Daily Happiness Levels and the USD/JPY Exchange Rate,”
+    and presented the analysis results.
+    Specifically, I quantified social happiness levels using newspaper article data
+    and analyzed their relationship with financial markets,
+    aiming to gain new insights from data analysis.
+  </p>
+
+
+
+
+  <h2>Background & Challenges</h2>
+  <p>
+    Exchange markets fluctuate under the influence of economic conditions and social situations,
+    but their relationship with “people’s psychological states”
+    is rarely analyzed quantitatively.
+    Therefore, I hypothesized that by extracting public sentiment from news articles,
+    it might be possible to analyze its relationship with exchange rates.
+  </p>
+
+
+
+
+  <h2>Approach</h2>
+  <p>
+    I performed morphological analysis on newspaper article data
+    and quantified happiness levels based on the frequency of positive and negative words.
+    Furthermore, I integrated this data with daily USD/JPY exchange rates
+    and examined the relationship using correlation analysis and statistical methods.
+  </p>
+
+  <div class="figure">
+    <video controls width="640">
+      <source src="../images/DataScienceLab.MP4" type="video/mp4">
+    </video>
+    <p>
+      Video: Actual presentation from the Data Science Lab
+    </p>
+  </div>
+
+
+
+
+  <h2>What I Learned</h2>
+  <p>
+    Through this research, I learned the process of extracting features from text data
+    and transforming them into quantitative analysis.
+    In addition, at an early stage as a first-year undergraduate student,
+    I developed the ability to formulate hypotheses, verify them using data,
+    and logically explain analytical results in public presentations.
+  </p>
+
+
+  <a href="../index.html">← Back</a>
+</section>
+```
+
+
+<script>
+function switchLang(lang) {
+  localStorage.setItem('lang', lang);
+
+  document.querySelectorAll('.ja').forEach(el => {
+    el.style.display = (lang === 'jp') ? 'block' : 'none';
+  });
+
+  document.querySelectorAll('.en').forEach(el => {
+    el.style.display = (lang === 'en') ? 'block' : 'none';
+  });
+}
+
+window.onload = () => {
+  const lang = localStorage.getItem('lang') || 'jp';
+  switchLang(lang);
+};
+</script>
+</body>
+</html>

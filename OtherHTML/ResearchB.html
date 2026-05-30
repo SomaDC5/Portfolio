@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>研究（学部）</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="ja">歩行バランス識別（学部）</h1>
+    <h1 class="en">Gait Balance Classification (Bachelor's degree)</h1>
+<div class="lang-btn">
+  <button onclick="switchLang('jp')">日本語</button>
+  <button onclick="switchLang('en')">EN</button>
+</div>
+  </header>
+
+  <section class="ja">
+    
+    <h2>概要</h2>
+    <p>
+      高齢者の転倒リスク低減を目的として、
+      加速度センサを用いた歩行バランス識別の研究に取り組んだ。
+      機械学習モデルの精度向上のため、
+      分類境界付近に擬似データを生成する手法を提案した。
+    </p>
+
+
+   
+    <h2>背景・課題</h2>
+    <p>
+      高齢化社会において転倒事故の増加が問題となっており、
+      バランス能力の定量的評価が求められている。
+      しかし、実データのみでは分類境界付近のデータが不足し、
+      識別精度が低下する課題があった。
+    </p>
+
+
+    <h2>取り組み</h2>
+    <p>
+      加速度センサで取得したデータをもとに機械学習モデルを構築し、
+      データ分布を分析した。
+      その上で、分類境界付近のデータを補完するために擬似データを生成し、
+      モデルの学習に活用した。
+    </p>
+
+    <h2>成果</h2>
+    <p>
+      擬似データ生成によって分類精度の向上を達成し、
+      研究成果を<a href="https://www.ipsj.or.jp/event/taikai/88/WEB/data/pdf/4ZK-06.html">情報処理学会全国大会</a>
+      と<a href="https://www.kansai-u.ac.jp/ordist/sentansympo/program/session14.html">関西大学先端科学技術シンポジウム</a>
+      にて発表した。
+
+      
+    </p>
+    <div class="figure">
+    <iframe src="../images/IPSJ_PP.pdf" width="100%" height="600px"></iframe>
+    <p>資料１：実際に発表したパワポのpdf資料</p>
+    </div>
+
+
+    <h2>得られた学び</h2>
+    <p>
+      本研究を通じて、モデル精度向上にはデータ設計が重要であることを学んだ。
+      また、研究成果を社会課題と結び付けることで、
+      技術の実用性を高める視点を身につけた。
+    </p>
+
+    
+
+    <a href="../index.html">← 戻る</a>
+  </section>
+
+
+<section class="en">
+
+  <h2>Overview</h2>
+  <p>
+    To help reduce fall risks among older adults,
+    I conducted research on walking balance classification using acceleration sensors.
+    In order to improve the accuracy of machine learning models,
+    I proposed a method for generating synthetic data near classification boundaries.
+  </p>
+
+
+
+
+
+  <h2>Background & Challenges</h2>
+  <p>
+    In aging societies, the increase in fall accidents has become a significant issue,
+    creating a demand for quantitative evaluation of balance ability.
+    However, using only real-world data resulted in insufficient samples near classification boundaries,
+    leading to lower classification accuracy.
+  </p>
+
+
+
+
+
+  <h2>Approach</h2>
+  <p>
+    I built machine learning models based on data collected from acceleration sensors
+    and analyzed the data distribution.
+    To address the lack of samples near classification boundaries,
+    I generated synthetic data and incorporated it into the model training process.
+  </p>
+
+
+
+
+
+  <h2>Results</h2>
+  <p>
+    The use of synthetic data improved classification accuracy,
+    and the research results were presented at the
+    <a href="https://www.ipsj.or.jp/event/taikai/88/WEB/data/pdf/4ZK-06.html">
+      IPSJ National Convention
+    </a>
+    and the
+    <a href="https://www.kansai-u.ac.jp/ordist/sentansympo/program/session14.html">
+      Kansai University Symposium on Advanced Science and Technology.
+    </a>
+  </p>
+
+  <div class="figure">
+    <iframe src="../images/IPSJ_PP.pdf" width="100%" height="600px"></iframe>
+    <p>
+      Document 1: PDF slides actually used for the presentation
+    </p>
+  </div>
+
+
+
+
+
+  <h2>What I Learned</h2>
+  <p>
+    Through this research,
+    I learned that data design plays an important role in improving model accuracy.
+    In addition, by connecting research outcomes to real social issues,
+    I developed a perspective focused on enhancing the practical applicability of technology.
+  </p>
+
+
+
+
+  <a href="../index.html">← Back</a>
+</section>
+
+
+
+<script>
+function switchLang(lang) {
+  localStorage.setItem('lang', lang);
+
+  document.querySelectorAll('.ja').forEach(el => {
+    el.style.display = (lang === 'jp') ? 'block' : 'none';
+  });
+
+  document.querySelectorAll('.en').forEach(el => {
+    el.style.display = (lang === 'en') ? 'block' : 'none';
+  });
+}
+
+window.onload = () => {
+  const lang = localStorage.getItem('lang') || 'jp';
+  switchLang(lang);
+};
+</script>
+</body>
+</html>

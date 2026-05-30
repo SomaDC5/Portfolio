@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>イベント企画</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="ja">企業共同データ分析プロジェクト（データサイエンスラボ）</h1>
+    <h1 class="en">Industry Collaborative Data Analysis Project</h1>
+<div class="lang-btn">
+  <button onclick="switchLang('jp')">日本語</button>
+  <button onclick="switchLang('en')">EN</button>
+</div>
+  </header>
+
+  <section class="ja">
+    
+    <h2>概要</h2>
+    <p>
+      企業との共同研究において、口コミデータおよび売上データを用いた分析を担当し、
+      データに基づいた施策提案を行った。本プロジェクトでは実際のビジネスデータを扱い、
+      データ分析を通じた意思決定支援を行うことを目的とした。
+    </p>
+
+
+    
+    <h2>背景・課題</h2>
+    <p>
+      対象企業では、売上向上に向けた施策の立案において、
+      経験や直感に依存した意思決定が多く、データを十分に活用しきれていないという課題があった。
+      また、口コミデータには顧客の嗜好や満足度に関する重要な情報が含まれているにもかかわらず、
+      膨大な量のため十分な分析が行われていなかった。
+    </p>
+
+
+    
+    <h2>取り組み</h2>
+    <p>
+      Pythonを用いて口コミデータの前処理および分析を行い、
+      形態素解析や統計手法を用いて顧客の評価要因を抽出した。
+      また、売上データとの関連性を分析し、
+      どの要素が購買行動や満足度向上に寄与しているかを明らかにした。
+    </p>
+
+    <p>
+      分析結果をもとに、効果が期待されるキャンペーン施策やクーポンの発行、
+      顧客満足度の高い新メニューの提案を行い、
+      データに基づいた意思決定支援を実現した。
+    </p>
+
+
+    <h2>成果</h2>
+    
+    <p>
+      データ分析によって顧客行動に影響を与える要因を可視化することで、
+      具体的かつ実現可能な施策提案が可能となった。
+      また、実データをもとにした分析結果は企業側からも高く評価され、
+      データ活用の有効性を実感する経験となった。
+    </p>
+
+    <h2>得られた学び</h2>
+    <p>
+      本プロジェクトを通じて、データ分析は単に結果を出すだけでなく、
+      実際の意思決定に繋がる形で活用することが重要であると学んだ。
+      また、実データにはノイズや偏りが存在するため、
+      前処理や仮説検証が非常に重要であることを実感した。
+    </p>
+
+
+
+    <a href="../index.html">← 戻る</a>
+  </section>
+
+
+<section class="en">
+
+  <h2>Overview</h2>
+  <p>
+    In a collaborative research project with a company,
+    I was responsible for analyzing customer review data and sales data
+    and proposing data-driven business strategies.
+    This project involved handling real business data
+    with the goal of supporting decision-making through data analysis.
+  </p>
+
+
+
+
+  <h2>Background & Challenges</h2>
+  <p>
+    The target company faced a challenge in that many business decisions related to sales improvement
+    relied heavily on experience and intuition,
+    while available data was not being fully utilized.
+    In addition, although customer review data contained valuable information
+    regarding customer preferences and satisfaction,
+    the large volume of data made comprehensive analysis difficult.
+  </p>
+
+
+
+
+  <h2>Approach</h2>
+  <p>
+    Using Python, I conducted preprocessing and analysis of customer review data,
+    applying morphological analysis and statistical methods
+    to identify factors influencing customer evaluations.
+    I also analyzed the relationship between review data and sales data
+    to clarify which factors contributed to purchasing behavior
+    and improvements in customer satisfaction.
+  </p>
+
+  <p>
+    Based on the analysis results,
+    I proposed effective campaign strategies, coupon promotions,
+    and new menu ideas with high customer satisfaction potential,
+    thereby supporting data-driven decision-making.
+  </p>
+
+
+
+
+  <h2>Results</h2>
+
+  <p>
+    By visualizing the factors that influenced customer behavior through data analysis,
+    it became possible to propose concrete and feasible business strategies.
+    Furthermore, the analysis results based on real-world data were highly appreciated by the company,
+    providing valuable insight into the effectiveness of data utilization.
+  </p>
+
+
+
+
+  <h2>What I Learned</h2>
+  <p>
+    Through this project, I learned that data analysis is not only about obtaining results,
+    but also about applying those results in ways that contribute to actual decision-making.
+    In addition, I realized the importance of preprocessing and hypothesis testing,
+    since real-world data often contains noise and bias.
+  </p>
+
+
+
+  <a href="../index.html">← Back</a>
+</section>
+
+
+
+
+<script>
+function switchLang(lang) {
+  localStorage.setItem('lang', lang);
+
+  document.querySelectorAll('.ja').forEach(el => {
+    el.style.display = (lang === 'jp') ? 'block' : 'none';
+  });
+
+  document.querySelectorAll('.en').forEach(el => {
+    el.style.display = (lang === 'en') ? 'block' : 'none';
+  });
+}
+
+window.onload = () => {
+  const lang = localStorage.getItem('lang') || 'jp';
+  switchLang(lang);
+};
+</script>
+</body>
+</html>
